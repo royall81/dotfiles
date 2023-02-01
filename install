@@ -19,3 +19,6 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 rm -rf $HOME/.config/ranger
 ln -s $DOTFILES/ranger $HOME/.config/ranger
+
+rm $HOME/.zshrc
+ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
