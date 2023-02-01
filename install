@@ -4,3 +4,18 @@ DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
+
+rm -rf $HOME/.config/nitrogen
+ln -s $DOTFILES/nitrogen $HOME/.config/nitrogen
+
+rm -rf $HOME/.config/i3
+ln -s $DOTFILES/i3 $HOME/.config/i3
+
+rm -rf $HOME/.config/i3blocks
+ln -s $DOTFILES/i3blocks $HOME/.config/i3blocks
+
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+rm -rf $HOME/.config/ranger
+ln -s $DOTFILES/ranger $HOME/.config/ranger
