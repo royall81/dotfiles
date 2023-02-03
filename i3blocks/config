@@ -29,6 +29,21 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[i3-focusedwindow]
+command=$SCRIPT_DIR/i3-focusedwindow/i3-focusedwindow
+label= 
+interval=1
+color=#FFFFFF
+
+# Date Time
+#
+[time]
+label= 
+command=date '+%m-%d %H:%M' 
+interval=5
+color=#689D6A
+
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
@@ -43,6 +58,16 @@ interval=once
 signal=10
 color=#FE8019
 #STEP=5%
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+command=$SCRIPT_DIR/battery/battery
+#label=BAT
+label=⚡
+interval=30
+color=#B16286
 
 # Memory usage
 #
@@ -65,18 +90,18 @@ interval=30
 # The directory defaults to $HOME if the instance is not specified.
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
-[disk]
-command=$SCRIPT_DIR/disk/disk
-label=
-#DIR=/mnt/data
-interval=30
-separator=true
-color=#98971A
+#[disk]
+#command=$SCRIPT_DIR/disk/disk
+#label=
+##DIR=/mnt/data
+#interval=30
+#separator=true
+#color=#98971A
 
 
 
 [wifi]
-#command=$SCRIPT_DIR/wifi/wifi
+command=$SCRIPT_DIR/wifi/wifi
 #INTERFACE=wlp2s0
 label=wifi:
 interval=10
@@ -99,27 +124,12 @@ min_width=CPU 100.00%
 
 [load_average]
 command=$SCRIPT_DIR/load_average/load_average
-label=LOAD
+label=󰖡 
 interval=10
 color=#458588
 
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-command=$SCRIPT_DIR/battery/battery
-#label=BAT
-label=⚡
-interval=30
-color=#B16286
 
-# Date Time
-#
-[time]
-label=
-command=date '+%m-%d %H:%M'
-interval=5
-color=#689D6A
+
 
 # Generic media player support
 #

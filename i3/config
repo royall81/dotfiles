@@ -14,13 +14,13 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:JetBrains Mono Regular Nerd Font Complete 10
+font pango:JetBrains Mono Regular Nerd Font Complete 12
 
 # Start nitrogen for the background images
-exec always nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
 # Start Picom
-exec picom
+exec --no-startup-id picom
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -48,7 +48,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+t exec kitty
+bindsym $mod+t exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,14 +185,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-
-client.background       #F8F8F2
+default_border pixel 1
+default_floating_border pixel 1
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -206,11 +200,6 @@ bar {
                 statusline #F8F8F2
                 separator  #44475A
 
-                focused_workspace  #44475A #44475A #F8F8F2
-                active_workspace   #282A36 #44475A #F8F8F2
-                inactive_workspace #282A36 #282A36 #BFBFBF
-                urgent_workspace   #FF5555 #FF5555 #F8F8F2
-                binding_mode       #FF5555 #FF5555 #F8F8F2
         }
 
 }
