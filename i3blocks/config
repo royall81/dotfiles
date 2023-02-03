@@ -43,7 +43,6 @@ command=date '+%m-%d %H:%M'
 interval=5
 color=#689D6A
 
-
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
