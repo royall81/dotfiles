@@ -1,29 +1,5 @@
 # i3blocks config file
 #
-# Please see man i3blocks for a complete reference!
-# The man page is also hosted at http://vivien.github.io/i3blocks
-#
-# List of valid properties:
-#
-# align
-# color
-# command
-# full_text
-# instance
-# interval
-# label
-# min_width
-# name
-# separator
-# separator_block_width
-# short_text
-# signal
-# urgent
-
-# Global properties
-#
-# The top properties below are applied to every block, but can be overridden.
-# Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
@@ -39,9 +15,14 @@ color=#FFFFFF
 #
 [time]
 label= 
-command=date '+%m-%d %H:%M' 
+command=date '+ %a, %d %b - %H:%M:%S' 
 interval=5
 color=#689D6A
+
+[wifi]
+label=󰖩
+command=nmcli -f SSID device wifi | sed -n 2p | xargs
+interval=5
 
 # Volume indicator
 #
@@ -145,19 +126,19 @@ color=#458588
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-command=$SCRIPT_DIR/iface/iface
-#IFACE=wlan0
-label=IN
-color=#D79921
-interval=10
-separator=true
-
-[public-ip]
-label=OUT
-command=wget -qO - icanhazip.com
-interval=once
-color=#A89984
+#[iface]
+#command=$SCRIPT_DIR/iface/iface
+##IFACE=wlan0
+#label=IN
+#color=#D79921
+#interval=10
+#separator=true
+#
+#[public-ip]
+#label=OUT
+#command=wget -qO - icanhazip.com
+#interval=once
+#color=#A89984
 
 # OpenVPN support
 #

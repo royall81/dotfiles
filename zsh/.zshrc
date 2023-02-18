@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export NOTES_CLI_HOME="/home/royall/Notes" # Set your favorite editor
 export NOTES_CLI_EDITOR=nvim # Set your favorite editor
-
+export EDITOR=nvim # Set Default editor 
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias s="kitty +kitten ssh"
