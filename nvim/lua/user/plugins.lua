@@ -11,7 +11,7 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
-  use { "ellisonleao/gruvbox.nvim" }
+  use 'sainnhe/gruvbox-material'
 
   use ({ -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -19,6 +19,9 @@ require('packer').startup(function(use)
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
+      'b0o/schemastore.nvim',
+      'jose-elias-alvarez/null-ls.nvim',
+      'jayp0521/mason-null-ls.nvim',
 
       -- Useful status updates for LSP
       'j-hui/fidget.nvim',
@@ -31,10 +34,22 @@ require('packer').startup(function(use)
     end,
   })
 
-  use { -- Autocompletion
-    'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-  }
+-- Completion
+use({
+  'hrsh7th/nvim-cmp',
+  requires = {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'onsails/lspkind-nvim',
+  },
+  config = function()
+    require('user/plugins/cmp')
+  end,
+})
 
     -- Git related plugins
   use 'tpope/vim-fugitive'
