@@ -7,15 +7,15 @@ markup=none
 
 [i3-focusedwindow]
 command=$SCRIPT_DIR/i3-focusedwindow/i3-focusedwindow
-label= 
+label=
 interval=1
 color=#FFFFFF
 
 # Date Time
 #
 [time]
-label= 
-command=date '+ %a, %d %b - %H:%M:%S' 
+label=
+command=date '+ %a, %d %b - %H:%M:%S'
 interval=5
 color=#689D6A
 
@@ -42,12 +42,12 @@ color=#FE8019
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-command=$SCRIPT_DIR/battery/battery
+#[battery]
+#command=$SCRIPT_DIR/battery/battery
 #label=BAT
-label=⚡
-interval=30
-color=#B16286
+#label=⚡
+#interval=30
+#color=#B16286
 
 # Memory usage
 #
