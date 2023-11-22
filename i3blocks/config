@@ -19,10 +19,10 @@ command=date '+ %a, %d %b - %H:%M:%S'
 interval=5
 color=#689D6A
 
-[wifi]
-label=󰖩
-command=nmcli -f SSID device wifi | sed -n 2p | xargs
-interval=5
+#[wifi]
+#label=󰖩
+#command=nmcli -f SSID device wifi | sed -n 2p | xargs
+#interval=5
 
 # Volume indicator
 #
