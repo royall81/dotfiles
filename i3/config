@@ -53,6 +53,11 @@ bindsym $mod+t exec --no-startup-id kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# assign program to workspace
+assign [class="thunderbird"] $ws4
+assign [class="firefox"] $ws1
+assign [class="gimp"] $ws6
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
@@ -113,9 +118,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  LOCAL"
-set $ws2 "2:  BROWSER"
-set $ws3 "3:  EXTERNAL"
+set $ws1 "1:  BROWSER"
+set $ws2 "2:  CLI LOCAL"
+set $ws3 "3:  CLI EXTERNAL"
 set $ws4 "4:  EMAIL"
 set $ws5 "5:  DATABASE"
 set $ws6 "6:  GIMP"
