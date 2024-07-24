@@ -1,7 +1,7 @@
 -- [[ Setting options ]]
-require 'user.plugins'
-require 'user.options'
-require 'user.keymaps'
+require("royall.lazy")
+require("royall.options")
+require("royall.keymaps")
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
