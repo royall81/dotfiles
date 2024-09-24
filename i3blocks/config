@@ -13,11 +13,11 @@ color=#FFFFFF
 
 # Date Time
 #
-[time]
-label=
-command=date '+ %a, %d %b - %H:%M:%S'
-interval=5
-color=#689D6A
+# [time]
+# label=
+# command=date '+ %a, %d %b - %H:%M:%S'
+# interval=5
+# color=#689D6A
 
 #[wifi]
 #label=󰖩
