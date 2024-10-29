@@ -109,3 +109,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias s="kitty +kitten ssh"
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH=$PATH:~/.config/composer/vendor/bin
